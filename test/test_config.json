@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "valid_packet",
+      "raw": [170, 1, 2, 169],
+      "expected": 0
+    },
+    {
+      "name": "invalid_checksum",
+      "raw": [170, 1, 2, 0],
+      "expected": -2
+    },
+    {
+      "name": "short_packet",
+      "raw": [170, 1],
+      "expected": -1
+    }
+  ]
+}
